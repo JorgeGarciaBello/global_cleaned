@@ -11,10 +11,10 @@ program main_global
     real(dp) :: val(3)
     integer  :: i,j
 
-    call grid_setting()    
+    call grid_setting()
     
     call db_read_data()      ! Lee datos de Dayabay
-    !call readRENOData()    ! Lee datos de RENO    
+    call readRENOData()    ! Lee datos de RENO    
     
     
     Y=0.0    
@@ -31,29 +31,22 @@ program main_global
             !   Covariance Matrix Approach
             !
             !#################################            
-            call daya_bay_cov(Y,db_chi_min); DB_data(i,j)=db_chi_min
-
-
-            !####################################################################################################
-            !
-            !                                         DOUBLE CHOOZ 
-            !
-            !#####################################################################################################
-            !call chi2_D_C(Y,chi_doubleCHOOZ) ! Subroutina que dado Y, regresa el valor de la chi-cuadrada para Double CHOOZ            
-            !chi_doubleCHOOZ=DC_FUNC(Y(2),Y(11),0.0_dp,0.0_dp,0.0_dp)
-
-            !call DC_double_chooz(Y,chi_doubleCHOOZ); DC_data(i,j)=chi_doubleCHOOZ
+            !call daya_bay_cov(Y,db_chi_min); DB_data(i,j)=db_chi_min            
             
             !####################################################################################################
             !
             !                                         RENO
             !
             !#####################################################################################################
-            !call renoChi2(Y,chi_reno); RENO_data(i,j) = chi_reno            
+            !
+            !   Pull Approach
+            !
+            !#################################
+            call renoChi2(Y,chi_reno); RENO_data(i,j) = chi_reno            
        enddo
         !write(u,*) ' '
         print*, i
     enddo
-    call write_results(n,DB_data,'db_data.dat')
+    call write_results(n,RENO_data,'db_data.dat')
   
 end program main_global

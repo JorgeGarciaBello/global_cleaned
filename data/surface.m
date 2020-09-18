@@ -1,7 +1,11 @@
-# surfacesurface
-cl_68=load("../daya_for_global_analysis/db_data/db2018_cl68.dat");
-cl_95=load("../daya_for_global_analysis/db_data/db2018_cl95.dat");
-cl_99=load("../daya_for_global_analysis/db_data/db2018_cl99.dat");
+# surface
+#cl_68=load("../daya_for_global_analysis/db_data/db2018_cl68.dat");
+#cl_95=load("../daya_for_global_analysis/db_data/db2018_cl95.dat");
+#cl_99=load("../daya_for_global_analysis/db_data/db2018_cl99.dat");
+
+cl_68=load("../reno_for_global_analysis/reno_data/reno2018_cl68.dat");
+cl_95=load("../reno_for_global_analysis/reno_data/reno2018_cl95.dat");
+cl_99=load("../reno_for_global_analysis/reno_data/reno2018_cl99.dat");
 
 
 
@@ -9,7 +13,7 @@ x=load("grid_data_s22t13_.dat");
 y=load("grid_data_dmee.dat");
 z=load("chi_matrix_db_data.dat");
 
-grid_dim=5
+grid_dim=50
 dim=200
 xi=linspace(x(1),x(grid_dim),dim);
 yi=linspace(y(1),y(grid_dim),dim);
@@ -64,7 +68,8 @@ plot(cl_68(:,1),cl_68(:,2),'h',"markersize", 2,"linewidth",3,
      cf_68(:,1),cf_68(:,2),'h',"markersize", 2,"linewidth",3,
      cf_95(:,1),cf_95(:,2),'h',"markersize", 2,"linewidth",3,
      cf_99(:,1),cf_99(:,2),'h',"markersize", 2,"linewidth",3)
-axis ([0.065, 0.105, 0.0022, 0.002801]); ylabel('\Deltam^{2}_{ee}');xlabel('sin^2 2\theta_{13}');
+#axis ([0.065, 0.105, 0.0022, 0.002801]); ylabel('\Deltam^{2}_{ee}');xlabel('sin^2 2\theta_{13}');
+axis ([0.0, 0.2, 0.002, 0.003]); ylabel('\Deltam^{2}_{ee}');xlabel('sin^2 2\theta_{13}');
 
 #file1 = fopen('xmgrace_data_origin.dat', 'w');
 #fprintf(file1,'%d %d %d \n' ,data);
