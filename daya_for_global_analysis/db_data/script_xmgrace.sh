@@ -1,0 +1,65 @@
+#!/bin/bash
+gfortran confidence_regions_from_octave.f90
+./a.out
+
+#xmgrace db2018_cl* db_cr_xmgrace_data_origin.dat_*
+
+xmgrace db2018_cl* db_cr_xmgrace_sigma_efficiency_test_percentage_1_all_bin.dat_*
+xmgrace db2018_cl* db_cr_xmgrace_sigma_efficiency_test_percentage_2_all_bin.dat_*
+xmgrace db2018_cl* db_cr_xmgrace_sigma_efficiency_test_percentage_3_all_bin.dat_*
+xmgrace db2018_cl* db_cr_xmgrace_sigma_efficiency_test_percentage_4_all_bin.dat_*
+xmgrace db2018_cl* db_cr_xmgrace_sigma_efficiency_test_percentage_5_all_bin.dat_*
+
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_Tpower_test_mod_percentage_1_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_Tpower_test_mod_percentage_2_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_Tpower_test_mod_percentage_3_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_Tpower_test_mod_percentage_4_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_Tpower_test_mod_percentage_5_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_Tpower_test_mod_percentage_6_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_Tpower_test_mod_percentage_7_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_Tpower_test_mod_percentage_8_all_bin.dat_*
+
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_1_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_2_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_3_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_4_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_5_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_6_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_7_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_8_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_9_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_10_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_11_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_12_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_13_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_14_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_15_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_percentage_16_all_bin.dat_*
+
+
+#xmgrace db2018_cl* db_cr_xmgrace_data_sigma_energy_test_mod_bin_15_percentage_1.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_data_sigma_energy_test_mod_bin_15_percentage_2.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_data_sigma_energy_test_mod_bin_15_percentage_3.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_data_sigma_energy_test_mod_bin_15_percentage_4.dat_*
+
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_mod_percentage_5_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_energy_test_mod_percentage_6_all_bin.dat_*
+
+
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_Tpower_test_mod_percentage_1_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_Tpower_test_mod_percentage_2_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_Tpower_test_mod_percentage_3_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_Tpower_test_mod_percentage_4_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_Tpower_test_mod_percentage_5_all_bin.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_sigma_Tpower_test_mod_percentage_6_all_bin.dat_*
+
+
+
+
+#xmgrace db2018_cl* db_cr_xmgrace_data_sigma_energy_test_mod_bin_15_percentage_1.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_data_sigma_energy_test_mod_bin_15_percentage_2.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_data_sigma_energy_test_mod_bin_15_percentage_3.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_data_sigma_energy_test_mod_bin_15_percentage_4.dat_*
+
+#xmgrace db2018_cl* db_cr_xmgrace_data_sigma_energy_test_mod_bin_15_percentage_5.dat_*
+#xmgrace db2018_cl* db_cr_xmgrace_data_sigma_energy_test_mod_bin_15_percentage_6.dat_*
