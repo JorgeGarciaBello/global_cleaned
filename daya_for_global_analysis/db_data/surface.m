@@ -1,9 +1,9 @@
 # surface
 x=load("db_s22t13_grid_data.dat");
 y=load("db_dm_grid_data.dat");
-z=load("db_chi_matrix_db_data_prueba.dat.dat");
+z=load("db_chi_matrix_db_data.dat.dat");
 
-grid_dim=15
+grid_dim=3
 dim=200
 xi=linspace(x(1),x(grid_dim),dim);
 yi=linspace(y(1),y(grid_dim),dim);
@@ -59,12 +59,12 @@ cf_68=load("octave_sigma_M_TP_E_68.dat");
 cf_95=load("octave_sigma_M_TP_E_95.dat");
 cf_99=load("octave_sigma_M_TP_E_99.dat");
 
-plot(cl_68(:,1),cl_68(:,2),'h',"markersize", 10,"linewidth",10,
-     cl_95(:,1),cl_95(:,2),'h',"markersize", 10,"linewidth",10,
-     cl_99(:,1),cl_99(:,2),'h',"markersize", 10,"linewidth",10,
-     cf_68(:,1),cf_68(:,2),'h',"markersize", 10,"linewidth",10,
-     cf_95(:,1),cf_95(:,2),'h',"markersize", 10,"linewidth",10,
-     cf_99(:,1),cf_99(:,2),'h',"markersize", 10,"linewidth",10)
+plot(cl_68(:,1),cl_68(:,2),'h',"markersize", 1,"linewidth",1,
+     cl_95(:,1),cl_95(:,2),'h',"markersize", 1,"linewidth",1,
+     cl_99(:,1),cl_99(:,2),'h',"markersize", 1,"linewidth",1,
+     cf_68(:,1),cf_68(:,2),'h',"markersize", 1,"linewidth",1,
+     cf_95(:,1),cf_95(:,2),'h',"markersize", 1,"linewidth",1,
+     cf_99(:,1),cf_99(:,2),'h',"markersize", 1,"linewidth",1)
 axis ([0.065, 0.105, 0.0022, 0.002801]); ylabel('\Deltam^{2}_{ee}');xlabel('sin^2 2\theta_{13}');
 
 #file1 = fopen('xmgrace_data_origin.dat', 'w');

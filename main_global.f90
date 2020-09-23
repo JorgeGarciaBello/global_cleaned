@@ -7,7 +7,7 @@ program main_global
     real(dp) :: db_chi_square_spectral_analysis2_period
     real(dp) :: DC_FUNC    
     real(dp) :: reno_chi_square_spectral_analysis
-    real(dp) :: Y(12)                                          !Y=( t12 , t13 , t14 , t23 , t24 , t34 , d13 , d24 , d34 , dm21 , dm31 , dm41 )        
+    real(dp) :: Y(13)                                          !Y=( t12 , t13 , t14 , t23 , t24 , t34 , d13 , d24 , d34 , dm21 , dm31 , dm41 )        
     real(dp) :: val(3)
     integer  :: i,j
 
@@ -15,12 +15,26 @@ program main_global
     
     call db_read_data()      ! Lee datos de Dayabay
     call readRENOData()    ! Lee datos de RENO    
+    Y=0.0
+
     
-    
-    Y=0.0    
+
+   Y(1)=8.0d-5 ! dm2_12   
+   !Y(2)=2.5d-3 !dm2_23
+   Y(3)=0.0d0 !dm2_34
+   
+   Y(4)=0.5d0 !theta_12
+   !Y(5)=0.1  !theta_13
+   Y(6)=0.78  !theta_23
+   
+   Y(7)=0.0d0 !theta_14
+   Y(8)=0.0d0 !theta_24
+   Y(9)=0.0d0 !theta_34
+   Y(10)=0.0
+
     do i=1,n
-        do j=1,n
-          Y(2)=t13_M_data(i,j); Y(11)=dm_M_data(i,j)
+        do j=1,n          
+          Y(5)=t13_M_data(i,j); Y(2)=dm_M_data(i,j)
 
             !####################################################################################################
             !
@@ -31,7 +45,7 @@ program main_global
             !   Covariance Matrix Approach
             !
             !#################################            
-            !call daya_bay_cov(Y,db_chi_min); DB_data(i,j)=db_chi_min            
+            call daya_bay_cov(Y,db_chi_min); DB_data(i,j)=db_chi_min
             
             !####################################################################################################
             !
@@ -47,6 +61,4 @@ program main_global
         !write(u,*) ' '
         print*, i
     enddo
-    call write_results(n,RENO_data,'db_data.dat')
-  
 end program main_global

@@ -30,12 +30,12 @@
 !
 !##############################################################################################
 
-subroutine renoChi2(Y,chi2_min)
+subroutine renoChi2(Y_,chi2_min)
     use types
-    use neu_osc_parameters
+    use neu_osc_parameters, only: Y, t13
     use reno_data, only: NDIM,NBIN,ADS,RCTS
     implicit none
-    real(dp) :: Y(12)              ! Arreglo con los parámetros de oscilación    
+    real(dp) :: Y_(13)              ! Arreglo con los parámetros de oscilación    
     real(dp) :: chi2_min           ! is the min value of the chi-square
     real(dp) :: dmee
     real(dp) :: Z(NDIM+1)
@@ -45,20 +45,22 @@ subroutine renoChi2(Y,chi2_min)
     REAL*8     X(NDIM),XX(NDIM-1)
     integer :: u
 
-    t12=Y(1)
-    t13=Y(2)
-    t14=Y(3)
-    t23=Y(4)
-    t24=Y(5)
-    t34=Y(6)
-    delta1=Y(7)
-    delta2=Y(8)
-    delta3=Y(9)
-    dm21=Y(10)
-    dm31=Y(11)
-    dm41=Y(12)    
+    Y=Y_
+    !t12=Y(1)
+    !t13=Y(2)
+    !t14=Y(3)
+    !t23=Y(4)
+    !t24=Y(5)
+    !t34=Y(6)
+    !delta1=Y(7)
+    !delta2=Y(8)
+    !delta3=Y(9)
+    !dm21=Y(10)
+    !dm31=Y(11)
+    !dm41=Y(12)
 
-    dmee=dm31
+    dmee=Y_(2)
+    t13=Y_(5)
     call reno_create_antineutrino_number_detector_reactor_bin(dmee,t13)
     select case(1)
         case(1) ! RENO pull analysis

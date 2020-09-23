@@ -2,8 +2,7 @@ subroutine readRENOData()
     use reno_data
     implicit none    
     integer :: i,j,u,reason
-    !open(10,file="reno_for_global_analysis/reno_data/reno_weightsPerNearHall.dat", status="old")
-    !open(11,file="reno_for_global_analysis/reno_data/reno_weightsPerHs.dat", status="old")
+    
     open(newunit=u,file="reno_for_global_analysis/reno_data/reno_near_obs.dat", status="old")
             read(u,*,IOSTAT=reason) nearObs
     close(u)
