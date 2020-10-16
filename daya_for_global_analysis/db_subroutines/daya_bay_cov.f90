@@ -22,7 +22,7 @@ subroutine daya_bay_cov(Y_,db_chi_min)
     !dm21=Y(10)
     !dm31=Y(11)
     !dm41=Y(12)
-
+    !dm31=Y(2)
     dmee=Y(2)
     t13=Y(5)
     db_chi_min=db_chi_square_spectral_analysis2_period(t13,dmee)
