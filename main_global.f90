@@ -99,7 +99,7 @@ program main_grid
     do k=1,points
       do i=1,points
         do j=1,points
-          write(u, '(4F16.8)') var_dm23(i),var_th13(j),var_th23(k),chi2_grid(i,j,k)
+          write(u, '(4F16.8)') var_dm23(i),sin(2.0d0*var_th13(j))**2,var_th23(k),chi2_grid(i,j,k)
           !write(u, '(4F16.8)') sin(2.0d0*var_th13(j))**2,var_dm23(i),chi2_grid(i,j,1)       
         enddo        
         write(u,*)
