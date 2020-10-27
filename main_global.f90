@@ -16,7 +16,7 @@ program main_grid
     integer :: u     
     CHARACTER(30)  names
 
-    names='prueba3D'        
+    names='prueba3D.continuacion'        
     call db_read_data()      ! Lee datos de Dayabay
     call readRENOData()    ! Lee datos de RENO    
 
@@ -45,7 +45,7 @@ program main_grid
     Y(13)=0.0
 
     open(newunit=u,file='db.dm32.s2t13.s2t23.'//trim(names)//'.dat')
-      do i=1,44800
+      do i=1,15761!44800
         Y(2) = grid(i,1)             !dm32
         Y(5) = asin(sqrt(grid(i,2))) !t13
         Y(6) = asin(sqrt(grid(i,3))) !t23
