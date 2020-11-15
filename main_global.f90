@@ -51,7 +51,7 @@ program main_grid
         Y(6) = asin(sqrt(grid(i,3))) !t23
         call daya_bay_cov(Y,db_chi_min)
         write(u,*) grid(i,1), grid(i,2), grid(i,3), db_chi_min
-        print*, newuniti
+        print*, i
       enddo
     close(u)
 end program 
