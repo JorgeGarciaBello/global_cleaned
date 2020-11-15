@@ -15,7 +15,7 @@ real(8) function db_chi_square_spectral_analysis2_period(t13,dmee)
     call db_generate_weight_w_systematic_array(t13,dmee,rand_w_i)
 
     call db_generate_vectors_U(t13,dmee,rand_w_i,Nbar_i,Ubar)
-    call db_create_vectors_N(t13,dmee,rand_W_k,N_i)
+    !call db_create_vectors_N(t13,dmee,rand_W_k,N_i)
 
     call db_create_M_stat_signal_bkg(t13,dmee,rand_W_k,Nbar_i,Ubar,V)    
     if (i_name < 10) then

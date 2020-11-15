@@ -7,6 +7,7 @@ subroutine db_generate_weight_w_array(t13,dmee,rand_W_k)
     
     do i=1,156
         rand_W_k(i)=db_create_w_i(t13,dmee,i)
+        print*,'weight: ', i, 'from t13: ', t13, 'dm: ', dmee
     enddo
     return
 end subroutine db_generate_weight_w_array
