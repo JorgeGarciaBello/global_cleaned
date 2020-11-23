@@ -17,7 +17,7 @@ use types
  real(dp) :: probability_of_transition_in_matter_a_b
  real(dp) :: P(3),Pbar(3)
  
-select case(3)
+select case(2)
      case(1)
         probability=db_probability_1(t13,dmee,l,x)
      case(2)

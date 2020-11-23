@@ -67,22 +67,22 @@ program main_grid
     !   Ieración para un grid de 3D = [dm32,s2t13,s2t23,]
     !
     !########################################################################################
-            print*, 'ih'
-            print*, 'RENO'
-            open(newunit=u,file='reno.grid.dm32.s2t13.s2t23.of.SK.'//trim(names)//'.dat')
-              do i=1,n_bins   !s44800
-                Y(2)  = -grid(i,1)             !dm32
-                Y(5)  = asin(sqrt(grid(i,2))) !t13
-                Y(6)  = asin(sqrt(grid(i,3))) !t23                
-
-                call renoChi2(Y,reno_chi_min)
-                write(u,*) grid(i,1), grid(i,2), grid(i,3), reno_chi_min                
-                print*, i
-              enddo
-            close(u)
+!            print*, 'ih'
+!            print*, 'RENO'
+!            open(newunit=u,file='reno.grid.dm32.s2t13.s2t23.of.SK.'//trim(names)//'.dat')
+!              do i=1,n_bins   !s44800
+!                Y(2)  = -grid(i,1)            !dm32
+!                Y(5)  = asin(sqrt(grid(i,2))) !t13
+!                Y(6)  = asin(sqrt(grid(i,3))) !t23
+!
+!                call renoChi2(Y,reno_chi_min)
+!                write(u,*) grid(i,1), grid(i,2), grid(i,3), reno_chi_min                
+!                print*, i
+!              enddo
+!            close(u)
             print*, 'ih'
             print*, 'Daya Bay '
-            open(newunit=u,file='dbreno.grid.dm32.s2t13.s2t23.of.SK.'//trim(names)//'.dat')
+            open(newunit=u,file='DB.grid.dm32.s2t13.s2t23.of.SK.'//trim(names)//'.dat')
               do i=1,n_bins !44800
                 Y(2)  = -grid(i,1)             !dm32
                 Y(5)  = asin(sqrt(grid(i,2))) !t13
