@@ -22,7 +22,7 @@ function reno_probability_of_survival(x, l, t13, dmee)
     real(dp) :: reno_probability_2
     real(dp) :: probability_of_transition_in_matter_a_b
     real(dp) :: P(3),Pbar(3)
-    select case(3)
+    select case(1)
         case(1)
         reno_probability_of_survival=reno_probability_1(t13,dmee,l,x)
         case(2)

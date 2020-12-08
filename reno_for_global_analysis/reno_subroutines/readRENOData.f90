@@ -3,6 +3,10 @@ subroutine readRENOData()
     implicit none    
     integer :: i,j,u,reason
     
+    open(newunit=u,file="reno_for_global_analysis/reno_data/reno_constant_reactor_flux_per_bin.dat", status="old")
+        read(u,*,IOSTAT=reason) constant_flux_per_bin
+    close(u)
+
     open(newunit=u,file="reno_for_global_analysis/reno_data/reno_near_obs.dat", status="old")
             read(u,*,IOSTAT=reason) nearObs
     close(u)

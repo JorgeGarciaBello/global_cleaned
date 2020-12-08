@@ -1,7 +1,7 @@
 module reno_data
     use types
     implicit none
-    integer,parameter :: NDIM=10                    ! NDIM is the number of pull parameters
+    integer,parameter :: NDIM=5                    ! NDIM is the number of pull parameters
     integer,parameter :: ADS=2                      ! ADS is the number of detectors
     integer,parameter :: RCTS=6                     ! RCTS is the number of reactors
     integer,parameter :: RIR=4                      ! RIR is the number of radioactive isotopes in the reactors     
@@ -10,6 +10,11 @@ module reno_data
     integer,parameter :: randDis=2                  ! randDis => 1 normal, randDis => 2 uniforme
     integer,parameter :: num_experiments=500
     
+    real(dp),save :: constant_flux_per_bin(NBIN)
+
+    real(dp),save :: reno_chi_from_newoua
+    real(dp),save :: alp
+
     real(dp),save :: nearObs(NBIN)              ! nearObs is the observed black-data-ṕoint spectrum in the Near detector by i-bin
     real(dp),save :: farObs(NBIN)               ! farObs is the observed black-data-ṕoint spectrum in the Far detector by i-bin    
 
